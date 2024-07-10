@@ -13,5 +13,11 @@
     </div>
 </body>
 <script>
+    var students = [];
 
+    document.getElementById('add-student-btn').addEventListener('click', function() {
+        console.log('hi');
+        students.push(document.getElementById('student').value);
+    })
+</script>
 </html>
