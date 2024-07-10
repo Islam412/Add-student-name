@@ -9,15 +9,18 @@
     <div style="text-align: center; margin-top: 100px;">
         <input type="text" id="student">
         <button id="add-student-btn">Submit</button>
-        <div class="students" style="font-size: 30px;"></div>
+        <div id="students" style="font-size: 30px;"></div>
     </div>
 </body>
 <script>
     var students = [];
 
+
     document.getElementById('add-student-btn').addEventListener('click', function() {
         var studentName = document.getElementById('student').value;
-        console.log(studentName);
-    })
+
+        students.push(studentName);
+        document.getElementById('students').innerHTML = students.join(', ');
+    });
 </script>
 </html>
